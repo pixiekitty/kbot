@@ -33,8 +33,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'ping':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Pong!'
+                    message: 'Pong'
                 });
+            break;
             // !bath
             case 'bath':
                 bot.sendMessage({
