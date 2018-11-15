@@ -6,6 +6,9 @@
   "author": "pixie",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "lodash": "^4.17.11",
+    "lowdb": "^1.0.0",
+    "moment-timezone": "^0.5.23",
     "winston": "^3.1.0"
   }
 }

@@ -1,0 +1,50 @@
+{
+  "messages": [
+    {
+      "command": "welcome",
+      "data": "Hello moto!"
+    },
+    {
+      "command": "troll",
+      "data": "Janine #1 troll."
+    },
+    {
+      "command": "short",
+      "data": "Rinria is the shortest"
+    },
+    {
+      "command": "announcement",
+      "data": "Pixie has made an awesome Discord bot for the server. Use !help to a see a list of commands."
+    },
+    {
+      "command": "slap",
+      "data": "IVIurder slaps Pixie"
+    },
+    {
+      "command": "sin",
+      "data": "Sinexus is banned from everything"
+    },
+    {
+      "command": "best",
+      "data": "Cari secretly worships Rinria"
+    },
+    {
+      "command": "foo",
+      "data": "<@!499440938733666305> is op"
+    },
+    {
+      "command": "help",
+      "data": "hi <@471335223502569482> whats up <@471335223502569482> testing <@471335223502569482>"
+    }
+  ],
+  "gvg": [
+    {
+      "name": "IVIurder",
+      "timestamp": "2018-11-15T19:44:46.845Z"
+    },
+    {
+      "name": "pixie",
+      "timestamp": "2018-11-15T20:06:26.723Z"
+    }
+  ]
+}
