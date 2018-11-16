@@ -15,7 +15,7 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 
 // set db default structure
-db.defaults({ messages: [], gvg: [] })
+db.defaults({ messages: [], gvg: [], thanks: [] })
   .write()
 
 // Initialize Discord Bot
@@ -92,12 +92,10 @@ function processUnset(bot, channelID, channelUser, message) {
     }
 
     const command = message.split(' ')[0];
-    const commandToDelete = message.substr(message.indexOf(" ") + 1);
-
-    if (command && commandToDelete && isUserAnAdmin(channelUser)) {
+    if (command && isUserAnAdmin(channelUser)) {
         const storedMessages = db.get('messages');
         for (let message of storedMessages) {
-            if (message.command === commandToDelete) {
+            if (message.command === command) {
                 db.get('messages')
                   .remove({ command: command })
                   .write()
@@ -160,6 +158,8 @@ function processHelp(bot, channelID) {
     const gvgRemoveMeMessage = "To remove yourself from the GvG list, type `!gvg-removeme`\n\n";
     const gvgListMessage = "To see list of players looking for GvG, type `!gvg-list`\n\n";
     const gvgClearListMessage = "To clear GvG list (admins only), type `!gvg-clear-list` or `!gvg-clear`\n\n";
+    const gvgRemoveSomeoneMessage = "To remove someone from the GvG list (admins only), type `!gvg-remove name`\n\n";
+    const giveThanksMessage = "To thank someone, type `!thank name`. To see ranking, `!top-thanks`\n\n";
 
     bot.sendMessage({
         to: channelID,
@@ -170,7 +170,9 @@ function processHelp(bot, channelID) {
                 gvgRequestMessage +
                 gvgListMessage +
                 gvgRemoveMeMessage +
-                gvgClearListMessage
+                gvgClearListMessage +
+                gvgRemoveSomeoneMessage +
+                giveThanksMessage
     });
 }
 
@@ -269,6 +271,32 @@ function processGvGRemoveMe(bot, channelID, user) {
     }
 }
 
+function processGvGRemoveSomeone(bot, channelID, adminUser, message) {
+    if (!isUserAnAdmin(adminUser)) {
+        bot.sendMessage({
+            to: channelID,
+            message: 'You are not allowed to do that `' + adminUser + '`!'
+        });
+        return;
+    }
+
+    const userToRemove = message.split(' ')[0];
+    const userGvGlist = db.get('gvg');
+    for (let userGvG of userGvGlist) {
+        if (userGvG.name === userToRemove) {
+            db.get('gvg')
+              .remove({ name: userToRemove })
+              .write()
+
+            bot.sendMessage({
+                to: channelID,
+                message: '`' + userToRemove + '` has been removed from the GvG list'
+            });
+            break;
+        }
+    }
+}
+
 function processGvGList(bot, channelID) {
     const usersLookingForGvG = db.get('gvg');
     let gvgList = '';
@@ -318,6 +346,92 @@ function processGvGClearList(bot, channelID, channelUser) {
     }
 }
 
+function processThanks(bot, channelID, giver, message) {
+    if (!giver && !message) {
+        return;
+    }
+
+    const user = message.split(' ')[0];
+    let thanksList = db.get('thanks');
+
+    console.log('Giver: ' + giver);
+    console.log('Receiver: ' + user);
+
+    if (user.includes(giver)) {
+        bot.sendMessage({
+            to: channelID,
+            message: '`' + user + '`' +
+                     ' is not allowed to give thanks to himself/herself!'
+        });
+        return;
+    }
+
+    let storedUser = null;
+    for (let thanks of thanksList) {
+        if (thanks.name === user) {
+            storedUser = thanks;
+            break;
+        }
+    }
+
+    if (!storedUser) {
+        db.get('thanks')
+          .push({ name: user, points: 10 })
+          .write();
+    }
+
+    // Hack refresh
+    thanksList = db.get('thanks');
+    for (let thanks of thanksList) {
+        if (thanks.name === user) {
+            storedUser = thanks;
+            break;
+        }
+    }
+
+    if (storedUser) {
+        db.get('thanks')
+          .remove({ name: user })
+          .write();
+
+        db.get('thanks')
+          .push({ name: user, points: storedUser.points + 10 })
+          .write();
+
+        bot.sendMessage({
+            to: channelID,
+            message: storedUser.name +
+                     ' has received 10 `gratitude` points from ' +
+                     '`' + giver + '`. He/she/it now has ' + (storedUser.points + 10) + ' total points'
+        });
+    }
+}
+
+
+function processTopThanks(bot, channelID) {
+    const thanksList = db.get('thanks');
+
+    const unsortedThanksList = [];
+    for (let thanks of thanksList) {
+        unsortedThanksList.push(thanks)
+    }
+    const sortedThanksList = _.orderBy(unsortedThanksList, ['points'], ['desc'])
+
+    let finalThanksList = "";
+    for (let thanks of sortedThanksList) {
+        finalThanksList += thanks.name + ' - ' + thanks.points + ' points\n';
+    }
+
+    let message = 'Top Thanks List \n' + finalThanksList;
+    if (finalThanksList.length === 0) {
+        message = 'No Top Thanks ranking yet!';
+    }
+    bot.sendMessage({
+        to: channelID,
+        message: message
+    });
+}
+
 bot.on('message', function (user, userID, channelID, commandAndMessage, evt) {
     // bot will process all commands that start exclamation mark `!`
     if (commandAndMessage.substring(0, 1) == '!') {
@@ -351,6 +465,9 @@ bot.on('message', function (user, userID, channelID, commandAndMessage, evt) {
             case 'gvg-removeme':
                 processGvGRemoveMe(bot, channelID, user);
                 break;
+            case 'gvg-remove':
+                processGvGRemoveSomeone(bot, channelID, user, message);
+                break;
             case 'gvg-list':
                 processGvGList(bot, channelID);
                 break;
@@ -359,6 +476,12 @@ bot.on('message', function (user, userID, channelID, commandAndMessage, evt) {
                 break;
             case 'gvg-clear':
                 processGvGClearList(bot, channelID, user);
+                break;
+            case 'thank':
+                processThanks(bot, channelID, user, message);
+                break;
+            case 'top-thanks':
+                processTopThanks(bot, channelID);
                 break;
             default:
                 processCommands(bot, channelID, command);

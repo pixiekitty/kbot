@@ -5,14 +5,6 @@
       "data": "Hello moto!"
     },
     {
-      "command": "troll",
-      "data": "Janine #1 troll."
-    },
-    {
-      "command": "short",
-      "data": "Rinria is the shortest"
-    },
-    {
       "command": "announcement",
       "data": "Pixie has made an awesome Discord bot for the server. Use !help to a see a list of commands."
     },
@@ -21,30 +13,135 @@
       "data": "IVIurder slaps Pixie"
     },
     {
-      "command": "sin",
-      "data": "Sinexus is banned from everything"
-    },
-    {
-      "command": "best",
-      "data": "Cari secretly worships Rinria"
-    },
-    {
-      "command": "foo",
-      "data": "<@!499440938733666305> is op"
-    },
-    {
       "command": "help",
       "data": "hi <@471335223502569482> whats up <@471335223502569482> testing <@471335223502569482>"
-    }
-  ],
-  "gvg": [
-    {
-      "name": "IVIurder",
-      "timestamp": "2018-11-15T19:44:46.845Z"
     },
     {
-      "name": "pixie",
-      "timestamp": "2018-11-15T20:06:26.723Z"
+      "command": "den-guide",
+      "data": "See video tutorial by @Catn1ss at https://www.youtube.com/watch?v=ic5a6gcn1cE"
+    },
+    {
+      "command": "buddies",
+      "data": "Rinria 💙s Poofer"
+    }
+  ],
+  "gvg": [],
+  "thanks": [
+    {
+      "name": "<@499440938733666305>",
+      "points": 20
+    },
+    {
+      "name": "<@470977583102820352>",
+      "points": 20
+    },
+    {
+      "name": "<@!491116344914345985>",
+      "points": 30
+    },
+    {
+      "name": "my",
+      "points": 20
+    },
+    {
+      "name": "<@488414315108499460>",
+      "points": 30
+    },
+    {
+      "name": "<@!473754536176254976>",
+      "points": 30
+    },
+    {
+      "name": "you",
+      "points": 20
+    },
+    {
+      "name": "Janine-is-a-troll",
+      "points": 20
+    },
+    {
+      "name": "CelticsAreCrap",
+      "points": 20
+    },
+    {
+      "name": "<@!154417631862980608>",
+      "points": 20
+    },
+    {
+      "name": "Cari",
+      "points": 20
+    },
+    {
+      "name": "<@!346467017190146048>",
+      "points": 30
+    },
+    {
+      "name": "CariSucksAss",
+      "points": 160
+    },
+    {
+      "name": "<@!400913580855394324>",
+      "points": 50
+    },
+    {
+      "name": "<@469079783200915457>",
+      "points": 40
+    },
+    {
+      "name": "@whoever",
+      "points": 20
+    },
+    {
+      "name": "<@!479747705141198851>",
+      "points": 20
+    },
+    {
+      "name": "Keebla",
+      "points": 20
+    },
+    {
+      "name": "@everyone",
+      "points": 20
+    },
+    {
+      "name": "<@!133916613186420736>",
+      "points": 20
+    },
+    {
+      "name": "<@316915609088557058>",
+      "points": 20
+    },
+    {
+      "name": "<@483096921938984960>",
+      "points": 50
+    },
+    {
+      "name": "@you",
+      "points": 20
+    },
+    {
+      "name": "lordbabyjesus",
+      "points": 20
+    },
+    {
+      "name": "@here",
+      "points": 20
+    },
+    {
+      "name": "<@479747705141198851>",
+      "points": 20
+    },
+    {
+      "name": "@lordbabyjesus",
+      "points": 20
+    },
+    {
+      "name": "<@!499440938733666305>",
+      "points": 60
+    },
+    {
+      "name": "<@480760282692714506>",
+      "points": 30
     }
   ]
 }
