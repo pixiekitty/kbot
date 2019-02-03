@@ -5,24 +5,12 @@
       "data": "Hello moto!"
     },
     {
-      "command": "announcement",
-      "data": "Pixie has made an awesome Discord bot for the server. Use !help to a see a list of commands."
-    },
-    {
-      "command": "slap",
-      "data": "IVIurder slaps Pixie"
-    },
-    {
       "command": "help",
       "data": "hi <@471335223502569482> whats up <@471335223502569482> testing <@471335223502569482>"
     },
     {
       "command": "den-guide",
       "data": "See video tutorial by @Catn1ss at https://www.youtube.com/watch?v=ic5a6gcn1cE"
-    },
-    {
-      "command": "bestzerk",
-      "data": "<@!479747705141198851> is the most mediocre zerker in the entire DR universe. 💯"
     },
     {
       "command": "rude",
@@ -37,42 +25,47 @@
       "data": "See https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-"
     },
     {
-      "command": "tryhard",
-      "data": "<@!479747705141198851> is such a try hard/one upper"
+      "command": "zerkout",
+      "data": "<@!479747705141198851> just rang your ass out! https://i.imgur.com/vIZWLRc.gifv"
+    },
+    {
+      "command": "rinout",
+      "data": "<@!499440938733666305> just rang your ass out! https://i.imgur.com/8RMJ7X1.gifv"
+    },
+    {
+      "command": "bestzerk",
+      "data": "<@!479747705141198851> is the best zerker in the whole DR universe! 💯"
+    },
+    {
+      "command": "JTM",
+      "data": "JTM JTM JTM #1 GUILD! No pants, Rock hard! #psyche #iwearsunglassesindoors #hailachilles"
+    },
+    {
+      "command": "gvg-buffs",
+      "data": "GvG oils in channel ???? - courtesy of ??????"
+    },
+    {
+      "command": "slap",
+      "data": "IVIurder slaps <@483096921938984960>"
     },
     {
       "command": "buddies",
       "data": "Rinria 💙s Poofer"
     },
     {
-      "command": "flirt",
-      "data": "Poofer sweeps Asianna off her feet. 💑"
-    },
-    {
-      "command": "zerkout",
-      "data": "<@!479747705141198851> just rang your ass out! https://i.imgur.com/vIZWLRc.gifv"
+      "command": "whip",
+      "data": "<@499440938733666305> got <@462108514974826498> GvG whipped 😂 😂"
     }
   ],
-  "gvg": [],
+  "gvg": [
+    {
+      "name": "UnholyGhost",
+      "timestamp": "2019-01-30T21:06:35.472Z"
+    }
+  ],
   "thanks": [
     {
-      "name": "<@499440938733666305>",
-      "points": 20
-    },
-    {
-      "name": "<@!491116344914345985>",
-      "points": 30
-    },
-    {
       "name": "my",
-      "points": 20
-    },
-    {
-      "name": "<@488414315108499460>",
-      "points": 30
-    },
-    {
-      "name": "you",
       "points": 20
     },
     {
@@ -92,36 +85,12 @@
       "points": 20
     },
     {
-      "name": "<@!346467017190146048>",
-      "points": 30
-    },
-    {
-      "name": "<@!400913580855394324>",
-      "points": 50
-    },
-    {
       "name": "@whoever",
-      "points": 20
-    },
-    {
-      "name": "Keebla",
       "points": 20
     },
     {
       "name": "@everyone",
       "points": 20
-    },
-    {
-      "name": "<@!133916613186420736>",
-      "points": 20
-    },
-    {
-      "name": "<@316915609088557058>",
-      "points": 20
-    },
-    {
-      "name": "<@483096921938984960>",
-      "points": 50
     },
     {
       "name": "@you",
@@ -144,24 +113,8 @@
       "points": 20
     },
     {
-      "name": "<@480760282692714506>",
-      "points": 30
-    },
-    {
-      "name": "<@!479747705141198851>",
-      "points": 30
-    },
-    {
-      "name": "<@!462108514974826498>",
-      "points": 80
-    },
-    {
       "name": "carisucksass",
       "points": 20
-    },
-    {
-      "name": "<@!499440938733666305>",
-      "points": 120
     },
     {
       "name": "Sinexus",
@@ -172,36 +125,272 @@
       "points": 20
     },
     {
-      "name": "<@!188051609975128064>",
-      "points": 20
-    },
-    {
-      "name": "<@!473754536176254976>",
-      "points": 40
-    },
-    {
       "name": "<@!472587044195926036>",
       "points": 20
-    },
-    {
-      "name": "<@469079783200915457>",
-      "points": 50
     },
     {
       "name": "<@125460760624234507>",
       "points": 20
     },
     {
-      "name": "CariSucksAss",
-      "points": 180
+      "name": "<@133916613186420736>",
+      "points": 20
     },
     {
-      "name": "<@470977583102820352>",
+      "name": "you",
+      "points": 30
+    },
+    {
+      "name": "<@316915609088557058>",
       "points": 40
     },
     {
-      "name": "<@!439464781196427284>",
+      "name": "<@346467017190146048>",
       "points": 30
+    },
+    {
+      "name": "@Kaligo",
+      "points": 20
+    },
+    {
+      "name": "Keebla",
+      "points": 30
+    },
+    {
+      "name": "brzk",
+      "points": 20
+    },
+    {
+      "name": "ThreatsDad",
+      "points": 20
+    },
+    {
+      "name": "<@350524554340466689>",
+      "points": 30
+    },
+    {
+      "name": "StephenCurry",
+      "points": 20
+    },
+    {
+      "name": "ebonwind",
+      "points": 20
+    },
+    {
+      "name": "<@489228029776887809>",
+      "points": 30
+    },
+    {
+      "name": "@kaligo",
+      "points": 20
+    },
+    {
+      "name": "kaligo",
+      "points": 20
+    },
+    {
+      "name": "<@133916613186420736>.",
+      "points": 20
+    },
+    {
+      "name": "<@!352201797844205573>",
+      "points": 20
+    },
+    {
+      "name": "@blacksky",
+      "points": 20
+    },
+    {
+      "name": "<@484023980903104512>",
+      "points": 20
+    },
+    {
+      "name": "<@488414315108499460>",
+      "points": 50
+    },
+    {
+      "name": "<@!346467017190146048>",
+      "points": 50
+    },
+    {
+      "name": "<@!400913580855394324>",
+      "points": 120
+    },
+    {
+      "name": "<@!511906146794340361>",
+      "points": 30
+    },
+    {
+      "name": "<@!462108514974826498>",
+      "points": 100
+    },
+    {
+      "name": "@bierstad",
+      "points": 20
+    },
+    {
+      "name": "@sawjr",
+      "points": 20
+    },
+    {
+      "name": "@duels",
+      "points": 20
+    },
+    {
+      "name": "pixie",
+      "points": 30
+    },
+    {
+      "name": "<@462108514974826498>",
+      "points": 30
+    },
+    {
+      "name": "<@361353061337137162>",
+      "points": 20
+    },
+    {
+      "name": "<@481630588097265686>",
+      "points": 20
+    },
+    {
+      "name": "<@417677998058110976>",
+      "points": 40
+    },
+    {
+      "name": "Tyrion",
+      "points": 20
+    },
+    {
+      "name": "<@492765389931937812>",
+      "points": 20
+    },
+    {
+      "name": "<@188051609975128064>",
+      "points": 40
+    },
+    {
+      "name": "love",
+      "points": 20
+    },
+    {
+      "name": "<@483096921938984960>",
+      "points": 120
+    },
+    {
+      "name": "<@469079783200915457>",
+      "points": 70
+    },
+    {
+      "name": "<@!481630588097265686>",
+      "points": 30
+    },
+    {
+      "name": "<@!299756352908165122>",
+      "points": 20
+    },
+    {
+      "name": "Herobound",
+      "points": 20
+    },
+    {
+      "name": "<@235912262764724224>",
+      "points": 30
+    },
+    {
+      "name": "Frodo",
+      "points": 20
+    },
+    {
+      "name": "<@!439464781196427284>",
+      "points": 70
+    },
+    {
+      "name": "<@480760282692714506>",
+      "points": 80
+    },
+    {
+      "name": "<@!488414315108499460>",
+      "points": 20
+    },
+    {
+      "name": "<@439464781196427284>",
+      "points": 20
+    },
+    {
+      "name": "rinriasucksass",
+      "points": 30
+    },
+    {
+      "name": "<@!499440938733666305>",
+      "points": 160
+    },
+    {
+      "name": "<@!511780336284205067>",
+      "points": 60
+    },
+    {
+      "name": "<@!491116344914345985>",
+      "points": 90
+    },
+    {
+      "name": "<@400913580855394324>",
+      "points": 60
+    },
+    {
+      "name": "<@470977583102820352>",
+      "points": 110
+    },
+    {
+      "name": "<@323686833374625793>",
+      "points": 20
+    },
+    {
+      "name": "<@488971777368653836>",
+      "points": 20
+    },
+    {
+      "name": "<@468272715053137921>",
+      "points": 40
+    },
+    {
+      "name": "<@!484023980903104512>",
+      "points": 50
+    },
+    {
+      "name": "<@!473754536176254976>",
+      "points": 90
+    },
+    {
+      "name": "<@!479747705141198851>",
+      "points": 80
+    },
+    {
+      "name": "<@!188051609975128064>",
+      "points": 110
+    },
+    {
+      "name": "",
+      "points": 80
+    },
+    {
+      "name": "<@473754536176254976>",
+      "points": 80
+    },
+    {
+      "name": "<@!133916613186420736>",
+      "points": 140
+    },
+    {
+      "name": "<@499440938733666305>",
+      "points": 30
+    },
+    {
+      "name": "CariSucksAss",
+      "points": 290
+    },
+    {
+      "name": "keebla",
+      "points": 20
     }
   ]
 }
